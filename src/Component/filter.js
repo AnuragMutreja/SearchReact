@@ -6,13 +6,13 @@ class filter extends Component{
         this.state={
             error:null,
             isLoaded:false,
-            searchData:[]
+            filterData:[]
         };
     }
-    search(key)
+    filter(key)
     {
         console.warn(key)
-        fetch("https://the-cocktail-db.p.rapidapi.com/filter.php?c=Cocktail", {
+        fetch("https://the-cocktail-db.p.rapidapi.com/filter.php?c="+key, {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "the-cocktail-db.p.rapidapi.com",
@@ -23,7 +23,7 @@ class filter extends Component{
                     (res) => {
                         this.setState({
                             isLoaded: true,
-                            searchData: res.drinks
+                            filterData: res.drinks
 
                         });
                     },
@@ -55,6 +55,7 @@ class filter extends Component{
                       <option value="Beer">Beer</option>
                         <option value="Soft Drink / Soda">Soft Drink / Soda</option>
                     </select>
+                <input type="Submit" value="SUbmit"/>
 
             </div>
         );
