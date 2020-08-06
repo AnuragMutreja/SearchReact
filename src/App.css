@@ -1,5 +1,35 @@
-.App {
+
+.search {
   text-align: center;
+  font-family: sans-serif; padding: 1em;
+
+
+}
+.filter {
+  text-align: center;
+  font-family: sans-serif; padding: 1em;
+
+
+}
+.search-box {
+  text-align: center;
+  font-family: sans-serif; padding: 1em;
+  background: #dadce1;
+  top: 28%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 10px;
+  border-radius: 40px;
+  padding: 10px;
+  width: 200px;
+
+}
+
+.search-btn {
+  color: black;
+  height: 50px;
+
 }
 
 .App-logo {

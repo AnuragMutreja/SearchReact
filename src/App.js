@@ -6,21 +6,22 @@ import {
   Route,
   Link,
 } from 'react-router-dom';
-import Search from "./Component/Search"
-import List from "./Component/List"
+import Search from "./Component/Search";
+import Filter from "./Component/filter";
 function App() {
   return (
     <div className="App">
+
       <Router>
         <ul>
             <li><Link to="/search">Search</Link></li>
-            <li><Link to="/list">List</Link></li>
+            <li><Link to="/filter">Filter</Link></li>
         </ul>
-          <Route path="/search">
+          <Route path = "/search">
               <Search />
           </Route>
-          <Route path="/list">
-              <List />
+          <Route path = "/filter">
+              <Filter />
           </Route>
       </Router>
 

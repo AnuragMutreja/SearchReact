@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 
-class Search extends Component{
+class filter extends Component{
     constructor(props) {
         super(props)
         this.state={
@@ -39,19 +39,25 @@ class Search extends Component{
         const{error,isLoaded,searchData}=this.state;
         return(
 
-            <div class="search">
-                <h1>Search</h1>
-                <script src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
-                <input class="search-box" type="text" placeholder="Type To Search" onChange={(event => this.search(event.target.value))}/>
-                <a class="search-btn" href="search">
-                    <i class="fas fa-search"></i>
-                </a>
-                <div className="col">
-                    {searchData.map(drinks=><div>{drinks.strDrink}</div>)}
-                </div>
+            <div class = "filter">
+                <h1>FILTER</h1>
+                    <select>
+                      <option value="Ordinary Drink">Ordinary Drink</option>
+                      <option value="Cocktail">Cocktail</option>
+                      <option value="Milk / Float / Shake">Milk / Float / Shake</option>
+                      <option selected value="Other/Unknown">Other/Unknown</option>
+                      <option value="Cocoa">Cocoa</option>
+                      <option value="Shot">Shot</option>
+                      <option value="Coffee / Tea">Coffee / Tea</option>
+                      <option value="Homemade Liqueur">Homemade Liqueur</option>
+                        <option value="Punch / Party Drink">Punch / Party Drink</option>
+                      <option value="Beer">Beer</option>
+                        <option value="Soft Drink / Soda">Soft Drink / Soda</option>
+                    </select>
+
             </div>
         );
     }
 }
 
-export default Search;
+export default filter;
