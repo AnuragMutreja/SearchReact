@@ -12,12 +12,13 @@ class filter extends Component{
     search(key)
     {
         console.warn(key)
-        fetch("https://the-cocktail-db.p.rapidapi.com/filter.php?i=" + key, {
+        fetch("https://the-cocktail-db.p.rapidapi.com/filter.php?c=Cocktail", {
 	"method": "GET",
 	"headers": {
-        "x-rapidapi-host": "the-cocktail-db.p.rapidapi.com",
-        "x-rapidapi-key": "d83ab09e38msh3b1a4b2c6d3af7ap12faa5jsn304b4ae7631c"
-    }}).then(res => res.json())
+		"x-rapidapi-host": "the-cocktail-db.p.rapidapi.com",
+		"x-rapidapi-key": "d83ab09e38msh3b1a4b2c6d3af7ap12faa5jsn304b4ae7631c"
+	}
+}).then(res => res.json())
                 .then(
                     (res) => {
                         this.setState({
